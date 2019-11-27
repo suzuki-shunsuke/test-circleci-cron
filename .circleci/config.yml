@@ -1,0 +1,21 @@
+---
+workflows:
+  version: 2
+  cron:
+    triggers:
+      - schedule:
+          cron: "15 5 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - hello
+jobs:
+  hello:
+    docker:
+      - image: alpine:3.10.3
+    steps:
+      - name: hello
+        run:
+          command: echo hello
