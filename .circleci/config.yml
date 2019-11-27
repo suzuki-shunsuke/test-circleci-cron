@@ -4,7 +4,7 @@ workflows:
   cron:
     triggers:
       - schedule:
-          cron: "15 5 * * *"
+          cron: "20 5 * * *"
           filters:
             branches:
               only:
@@ -16,6 +16,6 @@ jobs:
     docker:
       - image: alpine:3.10.3
     steps:
-      - name: hello
-        run:
+      - run:
+          name: hello
           command: echo hello
