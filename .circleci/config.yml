@@ -2,13 +2,13 @@
 workflows:
   version: 2
   cron:
-    triggers:
-      - schedule:
-          cron: "20 5 * * *"
-          filters:
-            branches:
-              only:
-                - master
+    #     triggers:
+    #       - schedule:
+    #           cron: "20 5 * * *"
+    #           filters:
+    #             branches:
+    #               only:
+    #                 - master
     jobs:
       - hello
 jobs:
